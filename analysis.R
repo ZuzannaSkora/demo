@@ -38,3 +38,4 @@ hist(apples$weight)
 # return to previous default
 dev.off()
 
+# if I have a Rmarkdown file I can embed it
