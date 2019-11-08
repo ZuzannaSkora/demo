@@ -8,6 +8,7 @@
 # to send the current version to cloud (github) I have to press "push"
 # files in gitignore will not make it past R (so not going to git), 
 # you can hide data by adding it to gitignore
+# if I have an empty folder it's not gonna be put on github
 
 # run all the files (functions or source scripts) from folder R 
 # (for a clean master file)
@@ -33,7 +34,9 @@ head(apples)
 png('figs/hist_apple_weight.png')
 
 # plot
-hist(apples$weight)
+library(ggplot2)
+
+ggplot(apples, aes(weight)) + geom_histogram()
 
 # return to previous default
 dev.off()
